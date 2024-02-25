@@ -9,7 +9,7 @@ export interface TaskType {
 export function Tasks() {
   const [tasks, setTasks] = useState<TaskType[]>([]); // ALL TASKS
   const [createTask, setCreateTask] = useState<string>(""); // CREATE TASKS
-  const [completedTasksCount, setCompletedTasksCount] = useState<number>(0); // Completed Tasks Count 
+  const [completedTasksCount, setCompletedTasksCount] = useState<number>(0); // Completed Tasks Count
 
   function handleChangeTask(event: ChangeEvent<HTMLInputElement>) {
     setCreateTask(event.target.value);
@@ -22,14 +22,21 @@ export function Tasks() {
     setCreateTask("");
   }
 
-  function handleDeleteTask(taskToDelete: string) {
+  function handleDeleteTask(taskToDelete: string, isCompleted: boolean) {
     const newTasks = tasks.filter((task) => task.content !== taskToDelete);
-    setTasks(newTasks);
-  }
-  
-  function handleCompleteTask(isCompleted: boolean) {
-    isCompleted ? setCompletedTasksCount(completedTasksCount + 1) : setCompletedTasksCount(completedTasksCount - 1);
+    if (isCompleted) {
+      setCompletedTasksCount(completedTasksCount - 1);
+      setTasks(newTasks);
+    } else {
+      setTasks(newTasks);
     }
+  }
+
+  function handleCompleteTask(isCompleted: boolean) {
+    isCompleted
+      ? setCompletedTasksCount(completedTasksCount + 1)
+      : setCompletedTasksCount(completedTasksCount - 1);
+  }
 
   return (
     <main>

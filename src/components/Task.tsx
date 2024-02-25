@@ -3,14 +3,14 @@ import { ChangeEvent, useState } from "react";
 import { TaskType } from "./Tasks";
 
 interface TaskProps extends TaskType {
-  onDeleteTask: (task: string) => void;
+  onDeleteTask: (task: string, isCompleted: boolean) => void;
   onCompleteTask: (isCompleted: boolean) => void;
 }
 
 export function Task({ content, onDeleteTask, onCompleteTask }: TaskProps) {
   const [completeTask, setCompleteTask] = useState(false);
   function handleDeleteTask() {
-    onDeleteTask(content);
+    onDeleteTask(content, completeTask);
   }
 
   function handleCompleteTask(event: ChangeEvent<HTMLInputElement>) {
