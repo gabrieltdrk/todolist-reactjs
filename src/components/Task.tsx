@@ -27,7 +27,7 @@ export function Task({ content, onDeleteTask, onCompleteTask }: TaskProps) {
         className="rounded-full mx-3 hover:bg-[--blue-dark] checked:bg-[--purple-dark] checked:hover:bg-[--purple]"
         type="checkbox"
       />
-      <span className={completeTask ? "flex-1 line-through" : "flex-1"}>{content}</span>
+      <span className={completeTask ? "flex-1 line-through" : "flex-1 text-white"}>{content}</span>
       <Trash
         size={24}
         onClick={handleDeleteTask}

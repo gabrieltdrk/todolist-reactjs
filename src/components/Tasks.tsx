@@ -43,7 +43,7 @@ export function Tasks() {
       <header>
         <form
           onSubmit={handleSubmitTask}
-          className="flex items-center justify-center gap-2 -mt-7"
+          className="flex items-center justify-center gap-2 mx-2 -mt-7"
         >
           <input
             value={createTask}
@@ -53,7 +53,7 @@ export function Tasks() {
             type="text"
           />
           <button
-            className="flex gap-1 items-center justify-center h-[54px] w-[90px] bg-[--blue-dark] text-[--white] rounded-lg hover:bg-[--blue] transition-colors"
+            className="flex gap-1 items-center justify-center h-[54px] w-[90px] px-2 bg-[--blue-dark] text-[--white] rounded-lg hover:bg-[--blue] transition-colors"
             type="submit"
           >
             Criar <PlusCircle size={24} />
@@ -61,15 +61,15 @@ export function Tasks() {
         </form>
       </header>
 
-      <div className="m-auto w-[736px]">
-        <header className="flex justify-between w-[736px] mt-14 m-auto">
+      <div className="max-w-[736px] sm:m-auto mx-2">
+        <header className="flex justify-between max-w-[736px] mx-2 mt-14 m-auto">
           <div className="flex items-center gap-2">
             <strong className="text-[--blue]">Tarefas criadas</strong>
             <span className="rounded-full bg-[--gray-400] text-[--white] px-2.5 py-0.5 drop-shadow">
               {tasks.length}
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2 mx-0">
             <strong className="text-[--blue] ">Concluídas</strong>
             <span className="rounded-full bg-[--gray-400] text-[--white] px-2.5 py-0.5 drop-shadow">
               {completedTasksCount} de {tasks.length}

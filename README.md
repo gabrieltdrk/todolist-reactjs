@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+<h1 align="center"> TODO List | React.js </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="public/todolist-react.png">
 
-Currently, two official plugins are available:
+<h2 align="center">Descrição do projeto</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="justify">
+ Projeto foi desenvolvido como um dos projetos opcionais, da trilha React.js (2022) da <a href="https://rocketseat.com.br/">Rocketseat</a>. A aplicação permitirá a adição, conclusão e remoção de uma tarefa do seu dia-a-dia
 
-## Expanding the ESLint configuration
+###
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h2 align="center">Acesso ao projeto</h2>
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Você pode [acessar o código fonte do projeto](https://github.com/gabrieltdrk/todolist-reactjs) ou cloná-lo utilizando o seguinte comando:
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+git clone https://github.com/gabrieltdrk/todolist-reactjs.git
+```
+Após realizar o clone, basta utilizar o seguinte comando
+```
+cd todolist-reactjs
+npm run dev
+```
+<div align="center">Coded by <a href="https://github.com/gabrieltdrk">gabrieltdrk</a>.</div>
