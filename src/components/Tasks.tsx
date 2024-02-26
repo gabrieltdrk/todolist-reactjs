@@ -81,13 +81,12 @@ export function Tasks() {
           {tasks.length !== 0 ? (
             tasks.map((task) => {
               return (
-                <div key={task.content}>
                   <Task
+                    key={task.content}
                     content={task.content}
                     onCompleteTask={handleCompleteTask}
                     onDeleteTask={handleDeleteTask}
                   />
-                </div>
               );
             })
           ) : (
